@@ -1,0 +1,51 @@
+.overview-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    margin-top:40px;
+
+}
+
+.overview-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.overview-title h2{
+
+    font-size:18px;
+
+    color:#111827;
+
+    font-weight:700;
+
+}
+
+.segment-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+@media(max-width:1200px){
+
+.segment-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

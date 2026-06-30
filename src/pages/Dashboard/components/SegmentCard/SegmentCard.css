@@ -1,0 +1,105 @@
+.segment-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    border:1px solid #ECECEC;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.05);
+
+}
+
+.segment-header{
+
+    margin-bottom:22px;
+
+}
+
+.segment-title{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+}
+
+.segment-icon{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:14px;
+
+    background:#F0F3E8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#465A26;
+
+}
+
+.segment-title h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+    color:#111827;
+
+}
+
+.segment-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.segment-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #F3F3F3;
+
+}
+
+.segment-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.segment-row span{
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+.segment-row strong{
+
+    color:#111827;
+
+    font-size:15px;
+
+}

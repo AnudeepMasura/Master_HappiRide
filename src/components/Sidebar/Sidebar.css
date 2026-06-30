@@ -1,0 +1,109 @@
+.sidebar {
+  width: var(--sidebar-width);
+  flex: 0 0 var(--sidebar-width);
+  background-color: var(--sidebar-background);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  box-shadow: var(--shadow-sm);
+  z-index: var(--z-sidebar);
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.sidebar__brand {
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar__logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.sidebar__nav {
+  flex: 1;
+  padding: 0 16px;
+  overflow-y: auto;
+}
+
+.sidebar__nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar__nav-item {
+  width: 100%;
+}
+
+.sidebar__nav-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.sidebar__nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+.sidebar__nav-button--active {
+  background-color: var(--primary-color) !important;
+  color: var(--text-white) !important;
+  box-shadow: 0 4px 12px rgba(59, 83, 48, 0.2);
+  transform: none !important;
+}
+
+.sidebar__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20px;
+}
+
+.sidebar__label {
+  line-height: 1.2;
+}
+
+.sidebar__footer {
+  padding: 24px 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.sidebar__logout-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  color: #C0264C; /* Reddish logout color */
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.sidebar__logout-button:hover {
+  background-color: rgba(192, 38, 76, 0.08);
+  transform: translateX(4px);
+}

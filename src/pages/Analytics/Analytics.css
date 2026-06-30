@@ -1,0 +1,62 @@
+.analytics-page {
+  display: flex;
+  min-height: calc(100vh - 180px);
+  flex-direction: column;
+  gap: 32px;
+  animation: fadeIn .3s ease;
+}
+
+.analytics-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+}
+
+.analytics-separator {
+  color: #bdbdbd;
+}
+
+.analytics-current {
+  color: var(--primary-color);
+  font-weight: var(--font-bold);
+}
+
+.analytics-development-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  padding: 48px 24px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  background: var(--card-background);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.analytics-development-icon {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 20px;
+  background: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.analytics-development-card h1 {
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-size: 30px;
+}
+
+.analytics-development-card p {
+  color: var(--text-secondary);
+  font-size: var(--font-md);
+}

@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+@import "./theme.css";
+
+/* ===================================================
+   CSS RESET
+=================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===================================================
+   ROOT
+=================================================== */
+
+html,
+body,
+#root{
+    width:100%;
+    min-height:100vh;
+}
+
+body{
+    font-family:var(--font-family);
+    background:var(--background-color);
+    color:var(--text-primary);
+    font-size:var(--font-sm);
+    font-weight:var(--font-regular);
+    line-height:1.5;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ===================================================
+   LINKS
+=================================================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ===================================================
+   BUTTONS
+=================================================== */
+
+button{
+    font-family:inherit;
+    border:none;
+    outline:none;
+    background:none;
+    cursor:pointer;
+    transition:var(--transition-normal);
+}
+
+/* ===================================================
+   INPUTS
+=================================================== */
+
+input,
+textarea,
+select{
+    font-family:inherit;
+    outline:none;
+    border:1px solid var(--border-color);
+}
+
+/* ===================================================
+   IMAGES
+=================================================== */
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/* ===================================================
+   LISTS
+=================================================== */
+
+ul,
+ol{
+    list-style:none;
+}
+
+/* ===================================================
+   HEADINGS
+=================================================== */
+
+h1{
+    font-size:var(--font-3xl);
+    font-weight:var(--font-extrabold);
+}
+
+h2{
+    font-size:var(--font-2xl);
+    font-weight:var(--font-bold);
+}
+
+h3{
+    font-size:var(--font-xl);
+    font-weight:var(--font-bold);
+}
+
+h4{
+    font-size:var(--font-lg);
+    font-weight:var(--font-semibold);
+}
+
+/* ===================================================
+   COMMON CLASSES
+=================================================== */
+
+.container{
+    max-width:var(--container-width);
+    margin:auto;
+    padding:var(--space-lg);
+}
+
+.card{
+    background:var(--card-background);
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-sm);
+}
+
+.flex{
+    display:flex;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.hidden{
+    display:none;
+}
+
+/* ===================================================
+   ANIMATIONS
+=================================================== */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-in{
+    animation:fadeIn .4s ease;
+}
+
+/* ===================================================
+   SCROLLBAR
+=================================================== */
+
+::-webkit-scrollbar{
+    width:6px;
+}
+
+::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#C7CCD3;
+    border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#AEB4BC;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media (max-width:768px){
+
+    .container{
+        padding:var(--space-md);
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+}
