@@ -8,32 +8,32 @@ import type {
 
 import "./SupportTable.css";
 
+
 interface SupportTableProps {
 
     tickets: SupportTicket[];
 
+    onViewTicket: (
+        ticket: SupportTicket
+    ) => void;
+
 }
 
+
 const SupportTable = ({
-    tickets
+    tickets,
+    onViewTicket
 }: SupportTableProps) => {
-
-    const handleViewTicket = (
-        ticket: SupportTicket
-    ) => {
-
-        console.log(
-            "View ticket:",
-            ticket
-        );
-
-    };
 
     return (
 
         <div className="support-table-wrapper">
 
             <table className="support-table">
+
+                {/* ==========================================
+                    Table Header
+                ========================================== */}
 
                 <thead>
 
@@ -57,6 +57,11 @@ const SupportTable = ({
 
                 </thead>
 
+
+                {/* ==========================================
+                    Table Body
+                ========================================== */}
+
                 <tbody>
 
                     {
@@ -65,31 +70,49 @@ const SupportTable = ({
                             <tr key={ticket.id}>
 
                                 <td>
+
                                     {ticket.id}
+
                                 </td>
 
+
                                 <td>
+
                                     {ticket.date}
+
                                 </td>
 
+
                                 <td>
+
                                     {ticket.issue}
+
                                 </td>
 
+
                                 <td>
+
                                     {ticket.raisedBy}
+
                                 </td>
 
+
                                 <td>
+
                                     {ticket.location}
+
                                 </td>
+
 
                                 <td>
 
                                     <span
                                         className={
-                                            ticket.status === "Ongoing"
+                                            ticket.status ===
+                                            "Ongoing"
+
                                                 ? "support-status ongoing"
+
                                                 : "support-status closed"
                                         }
                                     >
@@ -100,16 +123,21 @@ const SupportTable = ({
 
                                 </td>
 
+
                                 <td>
 
                                     <button
+                                        type="button"
                                         className="support-view-button"
                                         onClick={() =>
-                                            handleViewTicket(
+                                            onViewTicket(
                                                 ticket
                                             )
                                         }
-                                        aria-label={`View ${ticket.id}`}
+                                        aria-label={
+                                            `View ${ticket.id}`
+                                        }
+                                        title="View Ticket Details"
                                     >
 
                                         <Eye size={21} />
@@ -126,6 +154,11 @@ const SupportTable = ({
                 </tbody>
 
             </table>
+
+
+            {/* ==========================================
+                Empty State
+            ========================================== */}
 
             {
                 tickets.length === 0 && (
@@ -144,5 +177,6 @@ const SupportTable = ({
     );
 
 };
+
 
 export default SupportTable;

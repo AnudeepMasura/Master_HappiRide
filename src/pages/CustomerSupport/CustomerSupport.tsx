@@ -15,24 +15,45 @@ from "./components/SupportTabs/SupportTabs";
 import SupportTable
 from "./components/SupportTable/SupportTable";
 
+import TicketDetailsModal
+from "./components/TicketDetailsModal/TicketDetailsModal";
+
 import {
     getCustomerSupportData
 } from "./api";
 
 import type {
     CustomerSupportResponse,
-    TicketFilter
+    TicketFilter,
+    SupportTicket
 } from "./types";
 
 import "./CustomerSupport.css";
 
+
 const CustomerSupport = () => {
 
+    /* ==========================================
+       Customer Support Data
+    ========================================== */
+
     const [supportData, setSupportData] =
-        useState<CustomerSupportResponse | null>(null);
+        useState<CustomerSupportResponse | null>(
+            null
+        );
+
+
+    /* ==========================================
+       Ticket Filter
+    ========================================== */
 
     const [activeFilter, setActiveFilter] =
         useState<TicketFilter>("all");
+
+
+    /* ==========================================
+       Date Filter
+    ========================================== */
 
     const [dateFrom, setDateFrom] =
         useState("");
@@ -40,11 +61,29 @@ const CustomerSupport = () => {
     const [dateTo, setDateTo] =
         useState("");
 
+
+    /* ==========================================
+       Selected Ticket
+    ========================================== */
+
+    const [selectedTicket, setSelectedTicket] =
+        useState<SupportTicket | null>(null);
+
+
+    /* ==========================================
+       Loading & Error
+    ========================================== */
+
     const [loading, setLoading] =
         useState(true);
 
     const [error, setError] =
         useState("");
+
+
+    /* ==========================================
+       Load Customer Support Data
+    ========================================== */
 
     useEffect(() => {
 
@@ -52,11 +91,14 @@ const CustomerSupport = () => {
 
     }, []);
 
+
     const loadCustomerSupportData = async () => {
 
         try {
 
             setLoading(true);
+
+            setError("");
 
             const data =
                 await getCustomerSupportData();
@@ -65,7 +107,10 @@ const CustomerSupport = () => {
 
         } catch (error) {
 
-            console.error(error);
+            console.error(
+                "Customer support error:",
+                error
+            );
 
             setError(
                 "Unable to load customer support data"
@@ -78,6 +123,99 @@ const CustomerSupport = () => {
         }
 
     };
+
+
+    /* ==========================================
+       Open Ticket Modal
+    ========================================== */
+
+    const handleViewTicket = (
+        ticket: SupportTicket
+    ) => {
+
+        setSelectedTicket(ticket);
+
+    };
+
+
+    /* ==========================================
+       Close Ticket Modal
+    ========================================== */
+
+    const handleCloseTicketModal = () => {
+
+        setSelectedTicket(null);
+
+    };
+
+
+    /* ==========================================
+       Resolve Ticket
+    ========================================== */
+
+    const handleResolveTicket = (
+        ticket: SupportTicket,
+        notes: string
+    ) => {
+
+        if (!supportData) {
+
+            return;
+
+        }
+
+        const updatedTickets =
+            supportData.tickets.map(
+                (currentTicket) => {
+
+                    if (
+                        currentTicket.id === ticket.id
+                    ) {
+
+                        return {
+
+                            ...currentTicket,
+
+                            status: "Closed" as const
+
+                        };
+
+                    }
+
+                    return currentTicket;
+
+                }
+            );
+
+
+        setSupportData({
+
+            ...supportData,
+
+            tickets: updatedTickets
+
+        });
+
+
+        console.log(
+            "Resolved Ticket:",
+            ticket.id
+        );
+
+        console.log(
+            "Support Notes:",
+            notes
+        );
+
+
+        setSelectedTicket(null);
+
+    };
+
+
+    /* ==========================================
+       Loading State
+    ========================================== */
 
     if (loading) {
 
@@ -93,13 +231,21 @@ const CustomerSupport = () => {
 
     }
 
+
+    /* ==========================================
+       Error State
+    ========================================== */
+
     if (error || !supportData) {
 
         return (
 
             <div className="customer-support-error">
 
-                {error}
+                {
+                    error ||
+                    "Customer support data unavailable"
+                }
 
             </div>
 
@@ -107,24 +253,46 @@ const CustomerSupport = () => {
 
     }
 
+
+    /* ==========================================
+       Filter Tickets
+    ========================================== */
+
     const filteredTickets =
-        supportData.tickets.filter((ticket) => {
+        supportData.tickets.filter(
+            (ticket) => {
 
-            if (activeFilter === "ongoing") {
+                if (
+                    activeFilter === "ongoing"
+                ) {
 
-                return ticket.status === "Ongoing";
+                    return (
+                        ticket.status === "Ongoing"
+                    );
+
+                }
+
+
+                if (
+                    activeFilter === "closed"
+                ) {
+
+                    return (
+                        ticket.status === "Closed"
+                    );
+
+                }
+
+
+                return true;
 
             }
+        );
 
-            if (activeFilter === "closed") {
 
-                return ticket.status === "Closed";
-
-            }
-
-            return true;
-
-        });
+    /* ==========================================
+       Customer Support Page
+    ========================================== */
 
     return (
 
@@ -137,23 +305,45 @@ const CustomerSupport = () => {
                 onDateToChange={setDateTo}
             />
 
+
             <SupportMetrics
                 metrics={supportData.metrics}
             />
+
 
             <SupportTabs
                 activeFilter={activeFilter}
                 onFilterChange={setActiveFilter}
             />
 
+
             <SupportTable
                 tickets={filteredTickets}
+                onViewTicket={handleViewTicket}
             />
+
+
+            {
+                selectedTicket && (
+
+                    <TicketDetailsModal
+                        ticket={selectedTicket}
+                        onClose={
+                            handleCloseTicketModal
+                        }
+                        onResolve={
+                            handleResolveTicket
+                        }
+                    />
+
+                )
+            }
 
         </div>
 
     );
 
 };
+
 
 export default CustomerSupport;

@@ -1,12 +1,5 @@
-import {
-    useEffect,
-    useState
-} from "react";
-
 import AnalyticsSegmentCard
 from "../AnalyticsSegmentCard/AnalyticsSegmentCard";
-
-import { getAnalyticsData } from "../../api";
 
 import type {
     AnalyticsSegment
@@ -14,24 +7,17 @@ import type {
 
 import "./OverviewSegmentMetrics.css";
 
-const OverviewSegmentMetrics = () => {
 
-    const [segments, setSegments] =
-    useState<AnalyticsSegment[]>([]);
+interface OverviewSegmentMetricsProps {
 
-    useEffect(() => {
+    segments: AnalyticsSegment[];
 
-        loadSegments();
+}
 
-    }, []);
 
-    const loadSegments = async () => {
-
-        const data = await getAnalyticsData();
-
-        setSegments(data.segments);
-
-    };
+const OverviewSegmentMetrics = ({
+    segments
+}: OverviewSegmentMetricsProps) => {
 
     return (
 
@@ -67,5 +53,6 @@ const OverviewSegmentMetrics = () => {
     );
 
 };
+
 
 export default OverviewSegmentMetrics;

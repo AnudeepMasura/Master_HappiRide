@@ -32,24 +32,52 @@ export const customerSupportDummyData: CustomerSupportResponse = {
 
     tickets: [
 
-        {
-            id: "#TK-8821",
-            date: "02/07/2026",
-            issue: "App login issue",
-            raisedBy: "User",
-            location: "AP, India",
-            status: "Ongoing"
-        },
+    {
+        id: "#TK-8821",
 
-        {
-            id: "#TK-8820",
-            date: "01/07/2026",
-            issue: "Payment Refund",
-            raisedBy: "Partner (for User)",
-            location: "KA, India",
-            status: "Closed"
-        }
+        date: "02/07/2026",
 
-    ]
+        issue: "App login issue",
+
+        raisedBy: "User",
+
+        location: "AP, India",
+
+        status: "Ongoing",
+
+        description:
+            "User is unable to login into the Happi Ride application. OTP is received successfully but authentication fails after verification.",
+
+        customerName: "Rahul Kumar",
+
+        phone: "+91 9876543221",
+
+        email: "rahul@example.com"
+    },
+
+    {
+        id: "#TK-8820",
+
+        date: "01/07/2026",
+
+        issue: "Payment Refund",
+
+        raisedBy: "Partner (for User)",
+
+        location: "KA, India",
+
+        status: "Closed",
+
+        description:
+            "Customer cancelled the ride but the refund amount has not yet been credited to the original payment method.",
+
+        customerName: "Arjun Reddy",
+
+        phone: "+91 9876543220",
+
+        email: "arjun@example.com"
+    }
+
+]
 
 };

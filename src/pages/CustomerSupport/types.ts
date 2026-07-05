@@ -19,6 +19,14 @@ export interface SupportTicket {
     raisedBy: string;
     location: string;
     status: TicketStatus;
+
+    description: string;
+
+    customerName: string;
+
+    phone: string;
+
+    email: string;
 }
 
 export interface CustomerSupportResponse {
