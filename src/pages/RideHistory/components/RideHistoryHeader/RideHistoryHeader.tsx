@@ -68,7 +68,16 @@ const RideHistoryHeader = ({
 
                 </div>
 
-                
+                <button
+                    className="export-btn"
+                    onClick={onExport}
+                >
+
+                    <Download size={18} />
+
+                    Export
+
+                </button>
 
             </div>
 

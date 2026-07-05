@@ -68,7 +68,8 @@ export const Sidebar = () => {
     {
       id: "kyc",
       label: "KYC",
-      icon: <Icons.KycIcon size={18} />
+      icon: <Icons.KycIcon size={18} />,
+      path: "/KYC"
     },
     {
       id: "settings",
