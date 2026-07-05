@@ -1,0 +1,43 @@
+.service-badge{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+.service-badge.taxi{
+
+    background:#E8F5E9;
+
+    color:#2E7D32;
+
+}
+
+.service-badge.pooling{
+
+    background:#E3F2FD;
+
+    color:#1565C0;
+
+}
+
+.service-badge.travels{
+
+    background:#FFF3E0;
+
+    color:#EF6C00;
+
+}

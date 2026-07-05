@@ -1,0 +1,35 @@
+.ride-route{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:500;
+
+}
+
+.route-arrow{
+
+    color:#22C55E;
+
+    font-weight:bold;
+
+}
+
+.ride-date{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.ride-date small{
+
+    color:#6B7280;
+
+}

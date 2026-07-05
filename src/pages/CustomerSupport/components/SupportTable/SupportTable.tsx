@@ -1,24 +1,16 @@
-import {
-    Eye
-} from "lucide-react";
+import { Eye } from "lucide-react";
 
-import type {
-    SupportTicket
-} from "../../types";
+import type { SupportTicket } from "../../types";
 
 import "./SupportTable.css";
 
-
 interface SupportTableProps {
-
     tickets: SupportTicket[];
 
     onViewTicket: (
         ticket: SupportTicket
     ) => void;
-
 }
-
 
 const SupportTable = ({
     tickets,
@@ -49,14 +41,15 @@ const SupportTable = ({
 
                         <th>LOCATION</th>
 
+                        <th>HANDLED BY</th>
+
                         <th>STATUS</th>
 
-                        <th>ACTIONS</th>
+                        <th>VIEW</th>
 
                     </tr>
 
                 </thead>
-
 
                 {/* ==========================================
                     Table Body
@@ -65,54 +58,29 @@ const SupportTable = ({
                 <tbody>
 
                     {
+
                         tickets.map((ticket) => (
 
                             <tr key={ticket.id}>
 
-                                <td>
+                                <td>{ticket.id}</td>
 
-                                    {ticket.id}
+                                <td>{ticket.date}</td>
 
-                                </td>
+                                <td>{ticket.issue}</td>
 
+                                <td>{ticket.raisedBy}</td>
 
-                                <td>
+                                <td>{ticket.location}</td>
 
-                                    {ticket.date}
-
-                                </td>
-
-
-                                <td>
-
-                                    {ticket.issue}
-
-                                </td>
-
-
-                                <td>
-
-                                    {ticket.raisedBy}
-
-                                </td>
-
-
-                                <td>
-
-                                    {ticket.location}
-
-                                </td>
-
+                                <td>{ticket.handledBy}</td>
 
                                 <td>
 
                                     <span
                                         className={
-                                            ticket.status ===
-                                            "Ongoing"
-
+                                            ticket.status === "Ongoing"
                                                 ? "support-status ongoing"
-
                                                 : "support-status closed"
                                         }
                                     >
@@ -123,24 +91,17 @@ const SupportTable = ({
 
                                 </td>
 
-
                                 <td>
 
                                     <button
                                         type="button"
                                         className="support-view-button"
-                                        onClick={() =>
-                                            onViewTicket(
-                                                ticket
-                                            )
-                                        }
-                                        aria-label={
-                                            `View ${ticket.id}`
-                                        }
-                                        title="View Ticket Details"
+                                        onClick={() => onViewTicket(ticket)}
+                                        aria-label={`View ${ticket.id}`}
+                                        title="View Ticket"
                                     >
 
-                                        <Eye size={21} />
+                                        <Eye size={20} />
 
                                     </button>
 
@@ -149,18 +110,15 @@ const SupportTable = ({
                             </tr>
 
                         ))
+
                     }
 
                 </tbody>
 
             </table>
 
-
-            {/* ==========================================
-                Empty State
-            ========================================== */}
-
             {
+
                 tickets.length === 0 && (
 
                     <div className="support-empty-state">
@@ -170,6 +128,7 @@ const SupportTable = ({
                     </div>
 
                 )
+
             }
 
         </div>
@@ -177,6 +136,5 @@ const SupportTable = ({
     );
 
 };
-
 
 export default SupportTable;

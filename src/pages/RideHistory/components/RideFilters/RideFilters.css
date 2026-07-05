@@ -1,0 +1,91 @@
+/* ==========================================
+   Ride Filters
+========================================== */
+
+.ride-filters{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+    margin-bottom:30px;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.ride-filter{
+
+    padding:14px 0;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:#6B7280;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+.ride-filter:hover{
+
+    color:#465A26;
+
+}
+
+.ride-filter.active{
+
+    color:#465A26;
+
+}
+
+.ride-filter.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-1px;
+
+    width:100%;
+
+    height:3px;
+
+    background:#22C55E;
+
+    border-radius:10px;
+
+}
+
+@media(max-width:768px){
+
+.ride-filters{
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+padding-bottom:8px;
+
+}
+
+.ride-filters::-webkit-scrollbar{
+
+display:none;
+
+}
+
+}

@@ -1,0 +1,106 @@
+.withdrawal-section {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 30px 18px;
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 3px 14px rgba(17, 24, 39, 0.04);
+}
+
+.withdrawal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.withdrawal-header h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+.withdrawal-header button {
+    padding: 6px 0;
+    color: #405b32;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.withdrawal-header button:hover {
+    color: #2f4525;
+}
+
+.withdrawal-table {
+    width: 100%;
+    min-width: 820px;
+    border-collapse: collapse;
+    color: #374151;
+    text-align: left;
+}
+
+.withdrawal-table th {
+    padding: 15px 10px 20px;
+    color: #6b7280;
+    background: transparent;
+    border-bottom: 1px solid #eceff1;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.withdrawal-table td {
+    padding: 20px 10px;
+    border-bottom: 1px solid #f0f1f2;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.withdrawal-table td:nth-child(5) {
+    color: #405b32;
+    font-weight: 700;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 76px;
+    box-sizing: border-box;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status.pending {
+    color: #a95312;
+    background: #fff2c9;
+}
+
+.status.approved {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.status.rejected {
+    color: #dc2626;
+    background: #fee2e2;
+}
+
+@media (max-width: 576px) {
+    .withdrawal-section {
+        padding: 24px 18px 14px;
+    }
+
+    .withdrawal-header h2 {
+        font-size: 20px;
+    }
+}

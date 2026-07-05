@@ -1,5 +1,5 @@
 import "./DashboardHeader.css";
-import { Home, RefreshCw } from "lucide-react";
+import { RefreshCw } from "lucide-react";
 
 const DashboardHeader = () => {
 
@@ -25,21 +25,7 @@ const DashboardHeader = () => {
 
             <div className="dashboard-header-left">
 
-                <div className="dashboard-breadcrumb">
-
-                    <Home size={15} />
-
-                    <span>Home</span>
-
-                    <span className="separator">/</span>
-
-                    <span className="active-page">
-
-                        Dashboard
-
-                    </span>
-
-                </div>
+                
 
                 <h1>
 

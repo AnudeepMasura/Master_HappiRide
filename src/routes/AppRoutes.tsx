@@ -23,6 +23,9 @@ from "../pages/Analytics/Analytics";
 import CustomerSupport
 from "../pages/CustomerSupport/CustomerSupport";
 
+import Wallet from "../pages/Wallet/Wallet";
+import RideHistory from "../pages/RideHistory/RideHistory";
+
 const AppRoutes = () => {
 
     return (
@@ -67,6 +70,15 @@ const AppRoutes = () => {
                             path="/customer-support"
                             element={<CustomerSupport />}
                         />
+                         <Route
+                            path="/Wallet"
+                            element={<Wallet />}
+                        />
+                         <Route
+                            path="/RideHistory"
+                            element={<RideHistory />}
+                        />
+
 
                     </Route>
 

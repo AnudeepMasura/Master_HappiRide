@@ -42,6 +42,7 @@ export const customerSupportDummyData: CustomerSupportResponse = {
         raisedBy: "User",
 
         location: "AP, India",
+         handledBy: "Support_Admin_01",
 
         status: "Ongoing",
 
@@ -65,6 +66,7 @@ export const customerSupportDummyData: CustomerSupportResponse = {
         raisedBy: "Partner (for User)",
 
         location: "KA, India",
+         handledBy: "Support_Admin_02",
 
         status: "Closed",
 

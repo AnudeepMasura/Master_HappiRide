@@ -1,0 +1,26 @@
+.wallet-header {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+}
+
+.wallet-header h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+@media (max-width: 768px) {
+    .wallet-header h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wallet-header h1 {
+        font-size: 26px;
+    }
+}

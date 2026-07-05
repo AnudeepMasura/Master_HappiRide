@@ -18,6 +18,7 @@ export interface SupportTicket {
     issue: string;
     raisedBy: string;
     location: string;
+     handledBy: string;
     status: TicketStatus;
 
     description: string;

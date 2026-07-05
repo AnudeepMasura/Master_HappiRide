@@ -1,0 +1,41 @@
+.wallet-stats {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 38px 28px;
+}
+
+.wallet-stats .wallet-card {
+    grid-column: span 3;
+}
+
+.wallet-stats .wallet-card:nth-child(n + 5) {
+    grid-column: span 4;
+}
+
+.wallet-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #405b32;
+}
+
+@media (max-width: 1200px) {
+    .wallet-stats .wallet-card,
+    .wallet-stats .wallet-card:nth-child(n + 5) {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 640px) {
+    .wallet-stats {
+        gap: 18px;
+    }
+
+    .wallet-stats .wallet-card,
+    .wallet-stats .wallet-card:nth-child(n + 5) {
+        grid-column: 1 / -1;
+    }
+}

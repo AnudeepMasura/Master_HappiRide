@@ -1,0 +1,44 @@
+.wallet-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    color: #374151;
+    animation: fadeIn 0.3s ease;
+}
+
+.wallet-page > .withdrawal-section {
+    margin-top: 10px;
+}
+
+.wallet-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    color: #405b32;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wallet-error {
+    padding: 20px;
+    color: #dc2626;
+    background: #fff4f4;
+    border: 1px solid #f4c7c7;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .wallet-page {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wallet-page {
+        gap: 22px;
+    }
+}

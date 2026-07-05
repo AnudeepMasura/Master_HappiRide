@@ -1,0 +1,35 @@
+/* ==========================================================
+   Ride History Page
+========================================================== */
+
+.ride-history-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+    width:100%;
+
+}
+
+@media(max-width:992px){
+
+.ride-history-page{
+
+gap:24px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ride-history-page{
+
+gap:20px;
+
+}
+
+}

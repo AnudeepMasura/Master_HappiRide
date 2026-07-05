@@ -40,12 +40,14 @@ export const Sidebar = () => {
     {
       id: "wallet",
       label: "WALLET",
-      icon: <Icons.WalletIcon size={18} />
+      icon: <Icons.WalletIcon size={18} />,
+      path: "/Wallet"
     },
     {
       id: "ride-history",
       label: "RIDE HISTORY",
-      icon: <Icons.RideHistoryIcon size={18} />
+      icon: <Icons.RideHistoryIcon size={18} />,
+       path: "/RideHistory"
     },
     {
       id: "users",
