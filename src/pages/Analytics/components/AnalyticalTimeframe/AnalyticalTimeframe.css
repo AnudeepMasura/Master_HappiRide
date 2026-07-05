@@ -1,0 +1,145 @@
+.analytical-timeframe {
+    width: 100%;
+
+    background: #FFFFFF;
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    border: 1px solid #ECECEC;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+    box-sizing: border-box;
+}
+
+.timeframe-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.timeframe-title svg {
+    color: #465A26;
+}
+
+.timeframe-title h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #111827;
+
+    font-weight: 700;
+}
+
+.timeframe-controls {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: end;
+
+    gap: 16px;
+}
+
+.date-field {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.date-field label {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #6B7280;
+}
+
+.date-field input {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #D6D9DD;
+
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    padding: 0 16px;
+
+    font-size: 15px;
+
+    color: #111827;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    font-family: inherit;
+
+    transition: .2s;
+}
+
+.date-field input:focus {
+    border-color: #465A26;
+}
+
+.apply-date-filter {
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #465A26;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-family: inherit;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.apply-date-filter:hover {
+    background: #5B7133;
+}
+
+@media (max-width: 900px) {
+    .timeframe-controls {
+        grid-template-columns: 1fr;
+    }
+}

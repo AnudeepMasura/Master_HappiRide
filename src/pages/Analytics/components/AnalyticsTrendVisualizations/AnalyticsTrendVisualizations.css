@@ -1,0 +1,63 @@
+.analytics-trends {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+    margin-top: 40px;
+}
+
+.analytics-trends-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.analytics-trends-dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    min-width: 12px;
+
+    border-radius: 50%;
+
+    background: #16A34A;
+
+    display: block;
+
+    flex-shrink: 0;
+
+}
+
+.analytics-trends-title h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #111827;
+
+    font-weight: 700;
+}
+
+.analytics-trends-divider {
+    display: none;
+}
+
+.analytics-chart-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 24px;
+}
+
+@media (max-width: 1000px) {
+    .analytics-chart-grid {
+        grid-template-columns: 1fr;
+    }
+}

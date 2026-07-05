@@ -1,0 +1,101 @@
+/* ==========================================================
+   Overview Segment Metrics
+   ========================================================== */
+
+.analytics-overview-section {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+    margin-top: 40px;
+}
+
+/* ==========================================================
+   Section Title
+   ========================================================== */
+
+.analytics-overview-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.analytics-overview-dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    min-width: 12px;
+
+    border-radius: 50%;
+
+    background: #16A34A;
+
+    display: block;
+
+    flex-shrink: 0;
+
+}
+
+.analytics-overview-title h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    line-height: 1.2;
+}
+
+/* ==========================================================
+   Segment Grid
+   ========================================================== */
+
+.analytics-segment-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media screen and (max-width: 1200px) {
+
+    .analytics-segment-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .analytics-overview-section {
+        gap: 20px;
+
+        margin-top: 24px;
+    }
+
+    .analytics-overview-title {
+        gap: 10px;
+    }
+
+    .analytics-overview-title h2 {
+        font-size: 16px;
+    }
+
+}

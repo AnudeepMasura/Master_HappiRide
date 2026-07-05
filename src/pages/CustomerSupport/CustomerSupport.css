@@ -1,9 +1,9 @@
 /* ==========================================================
-   Analytics Page
+   Customer Support Page
    Happi Ride Master Dashboard
    ========================================================== */
 
-.analytics {
+.customer-support {
 
     width: 100%;
 
@@ -18,24 +18,10 @@
 }
 
 /* ==========================================
-   Common Analytics Sections
-========================================== */
-
-.analytics-section {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 24px;
-
-}
-
-/* ==========================================
    Loading State
 ========================================== */
 
-.analytics-loading {
+.customer-support-loading {
 
     display: flex;
 
@@ -57,7 +43,7 @@
    Error State
 ========================================== */
 
-.analytics-error {
+.customer-support-error {
 
     background: #FFECEC;
 
@@ -79,7 +65,7 @@
 
 @media screen and (max-width:1200px){
 
-    .analytics{
+    .customer-support{
 
         gap:28px;
 
@@ -89,7 +75,7 @@
 
 @media screen and (max-width:992px){
 
-    .analytics{
+    .customer-support{
 
         gap:24px;
 
@@ -99,7 +85,7 @@
 
 @media screen and (max-width:768px){
 
-    .analytics{
+    .customer-support{
 
         gap:20px;
 
@@ -109,7 +95,7 @@
 
 @media screen and (max-width:576px){
 
-    .analytics{
+    .customer-support{
 
         gap:18px;
 

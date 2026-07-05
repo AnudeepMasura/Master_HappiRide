@@ -1,0 +1,223 @@
+/* ==========================================================
+   Analytics Segment Card
+   ========================================================== */
+
+.analytics-segment-card {
+    width: 100%;
+
+    min-width: 0;
+
+    background: #FFFFFF;
+
+    border: 1px solid #ECECEC;
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ==========================================================
+   Card Header
+   ========================================================== */
+
+.analytics-segment-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ==========================================================
+   Icon
+   ========================================================== */
+
+.analytics-segment-icon {
+    width: 50px;
+
+    height: 50px;
+
+    min-width: 50px;
+
+    border-radius: 14px;
+
+    background: #F0F3E8;
+
+    color: #465A26;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================
+   Title + Tag
+   ========================================================== */
+
+.analytics-segment-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    min-width: 0;
+
+}
+
+.analytics-segment-content h3 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.analytics-segment-tag {
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #111827;
+
+    line-height: 1.4;
+
+    letter-spacing: 0;
+
+    white-space: nowrap;
+
+    font-family: inherit;
+
+}
+
+/* ==========================================================
+   Metrics Body
+   ========================================================== */
+
+.analytics-segment-body {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* ==========================================================
+   Metric Row
+   ========================================================== */
+
+.analytics-segment-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #F3F3F3;
+}
+
+
+.analytics-segment-row:last-child {
+    border-bottom: none;
+}
+
+
+.analytics-segment-row span {
+    font-size: 14px;
+
+    color: #6B7280;
+
+    line-height: 1.4;
+}
+
+
+.analytics-segment-row strong {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media screen and (max-width: 1400px) {
+
+    .analytics-segment-content h3 {
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .analytics-segment-content h3 {
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .analytics-segment-card {
+        padding: 20px;
+    }
+
+    .analytics-segment-icon {
+        width: 44px;
+
+        height: 44px;
+
+        min-width: 44px;
+    }
+
+    .analytics-segment-content h3 {
+        font-size: 16px;
+
+        white-space: normal;
+    }
+
+    .analytics-segment-tag {
+        font-size: 10px;
+    }
+
+}

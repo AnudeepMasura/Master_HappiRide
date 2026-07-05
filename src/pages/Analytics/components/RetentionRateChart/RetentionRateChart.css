@@ -1,0 +1,61 @@
+.retention-chart-card {
+    background: #FFFFFF;
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    border: 1px solid #ECECEC;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+}
+
+.retention-chart-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.retention-chart-header h3 {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.retention-chart-header span {
+    background: #F0F3E8;
+
+    color: #465A26;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+}
+
+.retention-chart {
+    height: 260px;
+
+    margin-top: 16px;
+}
+
+.retention-axis-label {
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #6B7280;
+}

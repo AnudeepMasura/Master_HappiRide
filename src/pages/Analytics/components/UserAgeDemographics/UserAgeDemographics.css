@@ -1,0 +1,51 @@
+.age-demographics-card {
+    background: #FFFFFF;
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    border: 1px solid #ECECEC;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+}
+
+.age-demographics-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+}
+
+.age-demographics-header h3 {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.age-demographics-header span {
+    font-size: 13px;
+
+    color: #6B7280;
+}
+
+.age-demographics-chart {
+    height: 300px;
+}
+
+@media (max-width: 600px) {
+    .age-demographics-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}

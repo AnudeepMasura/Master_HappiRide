@@ -1,0 +1,141 @@
+/* ==========================================================
+   Customer Support Header
+   ========================================================== */
+
+.support-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+
+}
+
+/* ==========================================
+   Page Title
+========================================== */
+
+.support-header h1 {
+
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    line-height: 1.2;
+
+    font-family: inherit;
+
+}
+
+/* ==========================================
+   Date Filter
+========================================== */
+
+.support-date-filter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+}
+
+.support-filter-label {
+
+    font-size: 16px;
+
+    color: #6B7280;
+
+}
+
+.support-date-separator {
+
+    font-size: 16px;
+
+    color: #9CA3AF;
+
+}
+
+.support-date-filter input {
+
+    width: 172px;
+
+    height: 50px;
+
+    padding: 0 14px;
+
+    border: 1px solid #D6D9DD;
+
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: .2s;
+
+}
+
+.support-date-filter input:focus {
+
+    border-color: #465A26;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media screen and (max-width:768px){
+
+    .support-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+    .support-date-filter {
+
+        width: 100%;
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+@media screen and (max-width:576px){
+
+    .support-header h1 {
+
+        font-size: 24px;
+
+    }
+
+    .support-date-filter input {
+
+        width: 100%;
+
+    }
+
+}
