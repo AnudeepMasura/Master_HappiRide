@@ -1,0 +1,44 @@
+/* ==========================================================
+   Users Header
+   ========================================================== */
+
+
+.users-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.users-header h1 {
+
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    line-height: 1.2;
+
+    font-family: inherit;
+
+}
+
+
+@media screen and (max-width:576px) {
+
+    .users-header h1 {
+
+        font-size: 24px;
+
+    }
+
+}

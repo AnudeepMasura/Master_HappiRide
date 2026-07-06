@@ -1,0 +1,138 @@
+/* ==========================================================
+   Users Page
+   Happi Ride Master Dashboard
+   ========================================================== */
+
+
+.users-page {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 32px;
+
+    animation: fadeIn .3s ease;
+
+}
+
+
+/* ==========================================
+   Users Table Card
+========================================== */
+
+
+.users-table-card {
+
+    width: 100%;
+
+    background: #FFFFFF;
+
+    border: 1px solid #ECECEC;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, .05);
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================
+   Loading State
+========================================== */
+
+
+.users-loading {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 400px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: var(--primary-color);
+
+}
+
+
+/* ==========================================
+   Error State
+========================================== */
+
+
+.users-error {
+
+    background: #FFECEC;
+
+    border: 1px solid #F5C2C2;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    color: #C62828;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+
+@media screen and (max-width:1200px) {
+
+    .users-page {
+
+        gap: 28px;
+
+    }
+
+}
+
+
+@media screen and (max-width:992px) {
+
+    .users-page {
+
+        gap: 24px;
+
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    .users-page {
+
+        gap: 20px;
+
+    }
+
+}
+
+
+@media screen and (max-width:576px) {
+
+    .users-page {
+
+        gap: 18px;
+
+    }
+
+}

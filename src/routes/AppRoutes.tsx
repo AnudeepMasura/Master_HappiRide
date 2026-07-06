@@ -20,12 +20,12 @@ from "../pages/Dashboard/Dashboard";
 import Analytics
 from "../pages/Analytics/Analytics";
 
+import Users
+from "../pages/Users/Users";
+
 import CustomerSupport
 from "../pages/CustomerSupport/CustomerSupport";
 
-import Wallet from "../pages/Wallet/Wallet";
-import RideHistory from "../pages/RideHistory/RideHistory";
-import KYC from "../pages/KYC/KYC";
 
 const AppRoutes = () => {
 
@@ -36,7 +36,7 @@ const AppRoutes = () => {
             <Routes>
 
                 {/* ==========================================
-                    Login
+                    Login Route
                 ========================================== */}
 
                 <Route
@@ -46,7 +46,7 @@ const AppRoutes = () => {
 
 
                 {/* ==========================================
-                    Protected Master Routes
+                    Protected Master Dashboard Routes
                 ========================================== */}
 
                 <Route
@@ -57,33 +57,44 @@ const AppRoutes = () => {
                         element={<DashboardLayout />}
                     >
 
+                        {/* ==================================
+                            Dashboard
+                        ================================== */}
+
                         <Route
                             path="/"
                             element={<Dashboard />}
                         />
+
+
+                        {/* ==================================
+                            Analytics
+                        ================================== */}
 
                         <Route
                             path="/analytics"
                             element={<Analytics />}
                         />
 
+
+                        {/* ==================================
+                            Users
+                        ================================== */}
+
+                        <Route
+                            path="/users"
+                            element={<Users />}
+                        />
+
+
+                        {/* ==================================
+                            Customer Support
+                        ================================== */}
+
                         <Route
                             path="/customer-support"
                             element={<CustomerSupport />}
                         />
-                         <Route
-                            path="/Wallet"
-                            element={<Wallet />}
-                        />
-                         <Route
-                            path="/RideHistory"
-                            element={<RideHistory />}
-                        />
-                        <Route
-                            path="/KYC"
-                            element={<KYC />}
-                        />
-
 
                     </Route>
 
@@ -91,7 +102,7 @@ const AppRoutes = () => {
 
 
                 {/* ==========================================
-                    Unknown Route
+                    Unknown Routes
                 ========================================== */}
 
                 <Route
@@ -111,5 +122,6 @@ const AppRoutes = () => {
     );
 
 };
+
 
 export default AppRoutes;

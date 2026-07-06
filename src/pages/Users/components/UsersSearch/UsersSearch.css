@@ -1,0 +1,149 @@
+/* ==========================================================
+   Users Search
+   ========================================================== */
+
+
+.users-search {
+
+    width: 100%;
+
+    background: #FFFFFF;
+
+    border: 1px solid #ECECEC;
+
+    border-radius: 16px;
+
+    padding: 16px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, .03);
+
+}
+
+
+/* ==========================================
+   Search Input
+========================================== */
+
+
+.users-search input {
+
+    flex: 1;
+
+    height: 46px;
+
+    border: 1px solid #D6D9DD;
+
+    border-radius: 10px;
+
+    background: #FFFFFF;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    transition: .2s;
+
+}
+
+
+.users-search input::placeholder {
+
+    color: #9CA3AF;
+
+}
+
+
+.users-search input:focus {
+
+    border-color: #465A26;
+
+}
+
+
+/* ==========================================
+   Filter Button
+========================================== */
+
+
+.users-filter-button {
+
+    min-width: 110px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #F0F3E8;
+
+    color: #465A26;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.users-filter-button:hover {
+
+    background: #E5EAD9;
+
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+
+@media screen and (max-width:576px) {
+
+    .users-search {
+
+        flex-direction: column;
+
+    }
+
+
+    .users-search input,
+    .users-filter-button {
+
+        width: 100%;
+
+    }
+
+}

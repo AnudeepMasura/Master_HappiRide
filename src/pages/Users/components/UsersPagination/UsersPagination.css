@@ -1,0 +1,134 @@
+/* ==========================================================
+   Users Pagination
+   ========================================================== */
+
+
+.users-pagination {
+
+    width: 100%;
+
+    padding: 18px 24px;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid #F0F0F0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.users-pagination-info {
+
+    color: #6B7280;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+}
+
+
+/* ==========================================
+   Pagination Controls
+========================================== */
+
+
+.users-pagination-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.users-pagination-controls button {
+
+    min-width: 36px;
+
+    height: 34px;
+
+    padding: 0 10px;
+
+    border: 1px solid #D6D9DD;
+
+    border-radius: 8px;
+
+    background: #FFFFFF;
+
+    color: #6B7280;
+
+    font-size: 13px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.users-pagination-controls button:hover:not(:disabled) {
+
+    background: #F0F3E8;
+
+    color: #465A26;
+
+}
+
+
+.users-pagination-controls button.active {
+
+    border-color: #465A26;
+
+    background: #465A26;
+
+    color: #FFFFFF;
+
+}
+
+
+.users-pagination-controls button:disabled {
+
+    opacity: .45;
+
+    cursor: not-allowed;
+
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+
+@media screen and (max-width:576px) {
+
+    .users-pagination {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .users-pagination-controls {
+
+        width: 100%;
+
+        overflow-x: auto;
+
+    }
+
+}

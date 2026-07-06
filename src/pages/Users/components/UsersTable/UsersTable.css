@@ -1,0 +1,287 @@
+/* ==========================================================
+   Users Table
+   ========================================================== */
+
+
+.users-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.users-table {
+
+    width: 100%;
+
+    min-width: 2200px;
+
+    border-collapse: collapse;
+
+}
+
+
+/* ==========================================
+   Table Header
+========================================== */
+
+
+.users-table thead {
+
+    background: #FAFAFA;
+
+}
+
+
+.users-table th {
+
+    padding: 22px 16px;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #6B7280;
+
+    letter-spacing: .5px;
+
+    white-space: nowrap;
+
+    font-family: inherit;
+
+}
+
+
+/* ==========================================
+   Table Body
+========================================== */
+
+
+.users-table td {
+
+    padding: 22px 16px;
+
+    border-top: 1px solid #F0F0F0;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    font-family: inherit;
+
+}
+
+
+.users-table tbody tr {
+
+    transition: .2s;
+
+}
+
+
+.users-table tbody tr:hover {
+
+    background: #FAFCF8;
+
+}
+
+
+/* ==========================================
+   Special Columns
+========================================== */
+
+
+.users-id {
+
+    font-size: 12px !important;
+
+    font-family: monospace !important;
+
+}
+
+
+.users-username {
+
+    color: #465A26 !important;
+
+    font-weight: 600;
+
+}
+
+
+.users-email {
+
+    font-size: 12px !important;
+
+}
+
+
+.users-referral-code {
+
+    font-family: monospace !important;
+
+}
+
+
+.users-done-by {
+
+    color: #9CA3AF !important;
+
+    font-style: italic;
+
+}
+
+
+/* ==========================================
+   Eye Button
+========================================== */
+
+
+.users-eye-button {
+
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #9CA3AF;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.users-eye-button:hover {
+
+    background: #F0F3E8;
+
+    color: #465A26;
+
+}
+
+
+/* ==========================================
+   Value Action
+========================================== */
+
+
+.users-value-action {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+/* ==========================================
+   Rating
+========================================== */
+
+
+.users-rating {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.users-star {
+
+    color: #D1D5DB;
+
+    font-size: 16px;
+
+}
+
+
+.users-star.active {
+
+    color: #F59E0B;
+
+}
+
+
+/* ==========================================
+   Status
+========================================== */
+
+
+.users-status {
+
+    min-width: 80px;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.users-status.active {
+
+    background: #DCFCE7;
+
+    color: #15803D;
+
+}
+
+
+.users-status.blocked {
+
+    background: #FEE2E2;
+
+    color: #DC2626;
+
+}
+
+
+/* ==========================================
+   Empty State
+========================================== */
+
+
+.users-empty-state {
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: #6B7280;
+
+    font-size: 15px;
+
+}
