@@ -10,7 +10,7 @@
 
     border-radius:20px;
 
-    font-size:13px;
+    font-size:var(--font-badge);
 
     font-weight:700;
 

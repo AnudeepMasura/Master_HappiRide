@@ -16,7 +16,7 @@
 
     width: 100%;
 
-    min-width: 2200px;
+    min-width: 2700px;
 
     border-collapse: collapse;
 
@@ -41,7 +41,7 @@
 
     text-align: left;
 
-    font-size: 12px;
+    font-size: var(--font-table-heading);
 
     font-weight: 700;
 
@@ -69,7 +69,7 @@
 
     color: #374151;
 
-    font-size: 14px;
+    font-size: var(--font-table-body);
 
     white-space: nowrap;
 
@@ -99,7 +99,7 @@
 
 .users-id {
 
-    font-size: 12px !important;
+    font-size: var(--font-xs) !important;
 
     font-family: monospace !important;
 
@@ -117,7 +117,7 @@
 
 .users-email {
 
-    font-size: 12px !important;
+    font-size: var(--font-xs) !important;
 
 }
 
@@ -244,7 +244,7 @@
 
     justify-content: center;
 
-    font-size: 12px;
+    font-size: var(--font-badge);
 
     font-weight: 600;
 
@@ -282,6 +282,6 @@
 
     color: #6B7280;
 
-    font-size: 15px;
+    font-size: var(--font-table-body);
 
 }

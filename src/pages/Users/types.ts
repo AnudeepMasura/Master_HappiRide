@@ -27,13 +27,19 @@ export interface UserRecord {
 
     referredBy: string;
 
+    referredGuyEarnings: number;
+
     referredTo: string[];
+
+    earningsFromReferrals: number;
 
     ridesCompleted: number;
 
     gov: number;
 
     platformEarning: number;
+
+    referral: string;
 
     distance: number;
 

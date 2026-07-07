@@ -33,17 +33,23 @@ export const usersDummyData: UsersResponse = {
 
             referredBy: "amit_s",
 
+            referredGuyEarnings: 1200,
+
             referredTo: [
                 "anita_s",
                 "vikram_r",
                 "suresh_k"
             ],
 
+            earningsFromReferrals: 3400,
+
             ridesCompleted: 45,
 
             gov: 12400,
 
             platformEarning: 1240,
+
+            referral: "Active",
 
             distance: 156.4,
 
@@ -78,15 +84,21 @@ export const usersDummyData: UsersResponse = {
 
             referredBy: "rahul_k",
 
+            referredGuyEarnings: 450,
+
             referredTo: [
                 "priya_m"
             ],
+
+            earningsFromReferrals: 950,
 
             ridesCompleted: 12,
 
             gov: 4200,
 
             platformEarning: 420,
+
+            referral: "Active",
 
             distance: 45.2,
 
@@ -121,13 +133,19 @@ export const usersDummyData: UsersResponse = {
 
             referredBy: "rahul_k",
 
+            referredGuyEarnings: 0,
+
             referredTo: [],
+
+            earningsFromReferrals: 0,
 
             ridesCompleted: 31,
 
             gov: 8900,
 
             platformEarning: 890,
+
+            referral: "Inactive",
 
             distance: 112.7,
 
@@ -162,16 +180,22 @@ export const usersDummyData: UsersResponse = {
 
             referredBy: "anita_s",
 
+            referredGuyEarnings: 1800,
+
             referredTo: [
                 "kiran_p",
                 "neha_s"
             ],
+
+            earningsFromReferrals: 2600,
 
             ridesCompleted: 67,
 
             gov: 18600,
 
             platformEarning: 1860,
+
+            referral: "Active",
 
             distance: 245.8,
 

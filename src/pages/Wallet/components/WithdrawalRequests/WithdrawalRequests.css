@@ -51,7 +51,7 @@
     color: #6b7280;
     background: transparent;
     border-bottom: 1px solid #eceff1;
-    font-size: 15px;
+    font-size: var(--font-table-heading);
     font-weight: 700;
     white-space: nowrap;
 }
@@ -59,7 +59,7 @@
 .withdrawal-table td {
     padding: 20px 10px;
     border-bottom: 1px solid #f0f1f2;
-    font-size: 15px;
+    font-size: var(--font-table-body);
     white-space: nowrap;
 }
 
@@ -76,7 +76,7 @@
     box-sizing: border-box;
     padding: 5px 12px;
     border-radius: 999px;
-    font-size: 13px;
+    font-size: var(--font-badge);
     font-weight: 500;
 }
 

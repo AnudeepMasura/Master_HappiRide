@@ -26,7 +26,7 @@
 
     cursor:pointer;
 
-    font-size:17px;
+    font-size:var(--font-control);
 
     font-weight:600;
 

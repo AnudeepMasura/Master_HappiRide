@@ -1,0 +1,159 @@
+/* ===================================================
+   Riders Header
+=================================================== */
+
+.riders-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.riders-title h1{
+
+    font-size:var(--font-page-title);
+
+    font-weight:700;
+
+    color:#111827;
+
+    letter-spacing:0;
+
+    line-height:1.2;
+
+}
+
+/* ====================================== */
+
+.riders-toolbar{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    box-shadow:0 8px 28px rgba(0,0,0,.04);
+
+}
+
+/* ====================================== */
+
+.search-box{
+
+    flex:1;
+
+    height:58px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:0 20px;
+
+}
+
+.search-box svg{
+
+    color:#9CA3AF;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:var(--font-control);
+
+    background:none;
+
+}
+
+.search-box input::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+/* ====================================== */
+
+.filter-btn{
+
+    width:130px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#465A26;
+
+    color:white;
+
+    font-size:var(--font-control);
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.filter-btn:hover{
+
+    background:#5D7434;
+
+}
+
+/* ====================================== */
+
+@media(max-width:768px){
+
+.riders-toolbar{
+
+flex-direction:column;
+
+}
+
+.search-box{
+
+width:100%;
+
+}
+
+.filter-btn{
+
+width:100%;
+
+}
+
+}

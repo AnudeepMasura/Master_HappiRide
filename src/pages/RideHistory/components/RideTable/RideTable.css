@@ -34,7 +34,7 @@
 
     padding:18px;
 
-    font-size:14px;
+    font-size:var(--font-table-heading);
 
     text-align:left;
 
@@ -46,7 +46,7 @@
 
     border-bottom:1px solid #ECECEC;
 
-    font-size:14px;
+    font-size:var(--font-table-body);
 
     vertical-align:middle;
 

@@ -18,6 +18,9 @@ interface UsersTableProps {
     onViewReferrals:
         (user: UserRecord) => void;
 
+    onViewPersonalDetails:
+        (user: UserRecord) => void;
+
     onViewRides:
         (user: UserRecord) => void;
 
@@ -32,6 +35,8 @@ const UsersTable = ({
     users,
 
     onViewReferrals,
+
+    onViewPersonalDetails,
 
     onViewRides,
 
@@ -121,17 +126,25 @@ const UsersTable = ({
 
                         <th>GMAIL</th>
 
+                        <th>PERSONAL DETAILS</th>
+
                         <th>REFERRAL CODE</th>
 
-                        <th>REF. BY</th>
+                        <th>REFERRED BY</th>
 
-                        <th>REF. TO</th>
+                        <th>REFERRED GUY EARNINGS</th>
 
-                        <th>RIDES COMP.</th>
+                        <th>REFERRED TO</th>
+
+                        <th>EARNINGS FROM REFERRALS</th>
+
+                        <th>TRIPS</th>
 
                         <th>GOV</th>
 
-                        <th>PLATFORM EARNING</th>
+                        <th>PLATFORM EARNINGS</th>
+
+                        <th>REFERRAL</th>
 
                         <th>DIST. (KM)</th>
 
@@ -139,7 +152,7 @@ const UsersTable = ({
 
                         <th>SUPPORT</th>
 
-                        <th>ACTION</th>
+                        <th>STATUS</th>
 
                         <th>DONE BY</th>
 
@@ -207,6 +220,32 @@ const UsersTable = ({
 
                                     </td>
 
+                                    <td>
+
+                                        <button
+
+                                            type="button"
+
+                                            className="users-eye-button"
+
+                                            onClick={() =>
+
+                                                onViewPersonalDetails(
+                                                    user
+                                                )
+
+                                            }
+
+                                            title="View Personal Details"
+
+                                        >
+
+                                            <Eye size={18} />
+
+                                        </button>
+
+                                    </td>
+
 
                                     <td className="users-referral-code">
 
@@ -221,30 +260,63 @@ const UsersTable = ({
 
                                     </td>
 
+                                    <td>
+
+                                        {
+                                            formatCurrency(
+                                                user.referredGuyEarnings
+                                            )
+                                        }
+
+                                    </td>
+
 
                                     <td>
 
-                                        <button
+                                        <div className="users-value-action">
 
-                                            type="button"
+                                            <span>
 
-                                            className="users-eye-button"
+                                                {
+                                                    user.referredTo.length
+                                                }
 
-                                            onClick={() =>
+                                            </span>
 
-                                                onViewReferrals(
-                                                    user
-                                                )
 
-                                            }
+                                            <button
 
-                                            title="View Referrals"
+                                                type="button"
 
-                                        >
+                                                className="users-eye-button"
 
-                                            <Eye size={18} />
+                                                onClick={() =>
 
-                                        </button>
+                                                    onViewReferrals(
+                                                        user
+                                                    )
+
+                                                }
+
+                                                title="View Referrals"
+
+                                            >
+
+                                                <Eye size={18} />
+
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        {
+                                            formatCurrency(
+                                                user.earningsFromReferrals
+                                            )
+                                        }
 
                                     </td>
 
@@ -307,6 +379,12 @@ const UsersTable = ({
                                                 user.platformEarning
                                             )
                                         }
+
+                                    </td>
+
+                                    <td>
+
+                                        {user.referral}
 
                                     </td>
 

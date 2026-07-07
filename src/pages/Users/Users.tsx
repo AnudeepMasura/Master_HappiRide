@@ -145,6 +145,23 @@ const Users = () => {
 
 
     /* ==========================================
+       View Personal Details
+    ========================================== */
+
+    const handleViewPersonalDetails = (
+        user: UserRecord
+    ) => {
+
+        alert(
+
+            `${user.fullName}\n\nGender: ${user.gender}\nDOB: ${user.dob}\nGmail: ${user.gmail}\nPhone: ${user.phone}`
+
+        );
+
+    };
+
+
+    /* ==========================================
        View Referrals
     ========================================== */
 
@@ -309,6 +326,22 @@ const Users = () => {
                             normalizedSearch
                         )
 
+                    ||
+
+                    user.gmail
+                        .toLowerCase()
+                        .includes(
+                            normalizedSearch
+                        )
+
+                    ||
+
+                    user.referralCode
+                        .toLowerCase()
+                        .includes(
+                            normalizedSearch
+                        )
+
                 );
 
             }
@@ -387,6 +420,10 @@ const Users = () => {
 
                     onViewReferrals={
                         handleViewReferrals
+                    }
+
+                    onViewPersonalDetails={
+                        handleViewPersonalDetails
                     }
 
                     onViewRides={

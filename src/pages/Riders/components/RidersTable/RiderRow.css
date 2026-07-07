@@ -1,0 +1,55 @@
+.riders-table td{
+
+    vertical-align:middle;
+
+}
+
+.riders-table td i{
+
+    color:#9CA3AF;
+
+    font-style:italic;
+
+}
+
+.rider-detail-btn{
+
+    width:34px;
+
+    height:34px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#F3F4F6;
+
+    cursor:pointer;
+
+    color:#465A26;
+
+    transition:.25s;
+
+}
+
+.rider-detail-btn:hover{
+
+    background:#465A26;
+
+    color:white;
+
+}
+
+.rider-count-eye{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:8px;
+
+    width:max-content;
+
+}

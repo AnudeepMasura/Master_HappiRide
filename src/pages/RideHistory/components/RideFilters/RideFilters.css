@@ -28,7 +28,7 @@
 
     color:#6B7280;
 
-    font-size:18px;
+    font-size:var(--font-control);
 
     font-weight:600;
 

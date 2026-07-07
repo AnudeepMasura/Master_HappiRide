@@ -24,7 +24,7 @@
 
     margin: 0;
 
-    font-size: 32px;
+    font-size: var(--font-page-title);
 
     font-weight: 700;
 
@@ -52,7 +52,7 @@
 
 .support-filter-label {
 
-    font-size: 16px;
+    font-size: var(--font-sm);
 
     color: #6B7280;
 
@@ -60,7 +60,7 @@
 
 .support-date-separator {
 
-    font-size: 16px;
+    font-size: var(--font-sm);
 
     color: #9CA3AF;
 
@@ -82,7 +82,7 @@
 
     color: #111827;
 
-    font-size: 15px;
+    font-size: var(--font-control);
 
     font-family: inherit;
 

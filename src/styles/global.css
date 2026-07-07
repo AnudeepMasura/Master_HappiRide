@@ -65,6 +65,7 @@ input,
 textarea,
 select{
     font-family:inherit;
+    font-size:var(--font-control);
     outline:none;
     border:1px solid var(--border-color);
 }
@@ -92,12 +93,12 @@ ol{
 =================================================== */
 
 h1{
-    font-size:var(--font-3xl);
+    font-size:var(--font-page-title);
     font-weight:var(--font-extrabold);
 }
 
 h2{
-    font-size:var(--font-2xl);
+    font-size:var(--font-section-title);
     font-weight:var(--font-bold);
 }
 

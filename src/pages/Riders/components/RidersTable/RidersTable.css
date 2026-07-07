@@ -1,0 +1,107 @@
+.riders-table-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    box-shadow:0 8px 28px rgba(0,0,0,.05);
+
+}
+
+.table-wrapper{
+
+    overflow-x:auto;
+
+}
+
+.riders-table{
+
+    width:100%;
+
+    min-width:2800px;
+
+    border-collapse:collapse;
+
+}
+
+.riders-table thead{
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.riders-table th{
+
+    padding:18px 12px;
+
+    font-size:var(--font-table-heading);
+
+    font-weight:700;
+
+    color:#6B7280;
+
+    text-align:left;
+
+    letter-spacing:.5px;
+
+    white-space:nowrap;
+
+    font-family:inherit;
+
+}
+
+.riders-table th.referral-guy-column{
+
+    width:185px;
+
+    max-width:185px;
+
+    line-height:1.25;
+
+    white-space:normal;
+
+}
+
+.riders-table td{
+
+    padding:20px 12px;
+
+    font-size:var(--font-table-body);
+
+    color:#374151;
+
+    border-bottom:1px solid #F3F4F6;
+
+    font-family:inherit;
+
+    white-space:nowrap;
+
+}
+
+.riders-table tbody tr:hover{
+
+    background:#FAFBF8;
+
+}
+
+.table-footer{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.table-footer p{
+
+    color:#6B7280;
+
+    font-size:var(--font-sm);
+
+}

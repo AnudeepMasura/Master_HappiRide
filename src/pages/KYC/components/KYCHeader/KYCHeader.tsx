@@ -1,6 +1,6 @@
 import "./KYCHeader.css";
 
-import { Search, Download } from "lucide-react";
+import { Search } from "lucide-react";
 
 interface KYCHeaderProps {
 
@@ -14,8 +14,7 @@ interface KYCHeaderProps {
 
 const KYCHeader = ({
     search,
-    onSearchChange,
-    onExport
+    onSearchChange
 }: KYCHeaderProps) => {
 
     return (

@@ -20,7 +20,7 @@
 
     margin: 0;
 
-    font-size: 32px;
+    font-size: var(--font-page-title);
 
     font-weight: 700;
 

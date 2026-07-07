@@ -26,6 +26,11 @@ from "../pages/Users/Users";
 import CustomerSupport
 from "../pages/CustomerSupport/CustomerSupport";
 
+import KYC from "../pages/KYC/KYC";
+import RideHistory from "../pages/RideHistory/RideHistory"; 
+import Wallet from "../pages/Wallet/Wallet";
+import Riders from "../pages/Riders/Riders";
+
 
 const AppRoutes = () => {
 
@@ -94,6 +99,22 @@ const AppRoutes = () => {
                         <Route
                             path="/customer-support"
                             element={<CustomerSupport />}
+                        />
+                         <Route
+                            path="/KYC"
+                            element={<KYC />}
+                        />
+                        <Route
+                            path="/RideHistory"
+                            element={<RideHistory />}
+                        />
+                          <Route
+                            path="/Wallet"
+                            element={<Wallet />}
+                        />
+                         <Route
+                            path="/Riders"
+                            element={<Riders />}
                         />
 
                     </Route>

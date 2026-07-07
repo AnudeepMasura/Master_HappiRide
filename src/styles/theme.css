@@ -54,6 +54,13 @@
   --font-2xl: 32px;
   --font-3xl: 40px;
 
+  --font-page-title: var(--font-2xl);
+  --font-section-title: var(--font-lg);
+  --font-table-heading: var(--font-xs);
+  --font-table-body: var(--font-sm);
+  --font-control: var(--font-sm);
+  --font-badge: var(--font-xs);
+
   --font-light: 300;
   --font-regular: 400;
   --font-medium: 500;

@@ -18,11 +18,13 @@
 
 .ride-history-title h1{
 
-    font-size:46px;
+    font-size:var(--font-page-title);
 
     font-weight:700;
 
     color:#111827;
+
+    line-height:1.2;
 
 }
 
@@ -76,7 +78,7 @@
 
     background:transparent;
 
-    font-size:15px;
+    font-size:var(--font-control);
 
     font-weight:500;
 
@@ -106,7 +108,7 @@
 
     border-radius:12px;
 
-    font-size:15px;
+    font-size:var(--font-control);
 
     font-weight:600;
 

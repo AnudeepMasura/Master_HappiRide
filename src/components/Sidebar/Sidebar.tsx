@@ -83,7 +83,8 @@ export const Sidebar = () => {
                 <Icons.WalletIcon
                     size={18}
                 />
-            )
+            ),  
+            path: "/Wallet"
 
         },
 
@@ -98,7 +99,8 @@ export const Sidebar = () => {
                 <Icons.RideHistoryIcon
                     size={18}
                 />
-            )
+            ),
+              path: "/RideHistory"
 
         },
 
@@ -130,7 +132,8 @@ export const Sidebar = () => {
                 <Icons.RidersIcon
                     size={18}
                 />
-            )
+            ),
+            path: "/Riders"
 
         },
 
@@ -162,7 +165,8 @@ export const Sidebar = () => {
                 <Icons.KycIcon
                     size={18}
                 />
-            )
+            ),
+              path: "/KYC"
 
         },
 
