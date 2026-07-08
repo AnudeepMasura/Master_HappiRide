@@ -10,7 +10,7 @@ export const kycDummyData:KYCResponse={
 
             riderId:"#RID-101",
 
-            username:"alex_driver",
+            username:"alex_rivera",
 
             fullName:"Alex Rivera",
 
@@ -28,9 +28,9 @@ export const kycDummyData:KYCResponse={
 
             verifiedBy:"Admin_User1",
 
-            rejectionCount:0,
+            rejectionCount:1,
 
-            rejectedReason:""
+            rejectedReason:"Previous address proof rejected"
 
         },
 

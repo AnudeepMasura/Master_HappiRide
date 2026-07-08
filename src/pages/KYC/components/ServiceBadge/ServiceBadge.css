@@ -1,4 +1,4 @@
-.service-badge{
+.kyc-layout .service-badge{
 
     display:inline-flex;
 
@@ -18,7 +18,7 @@
 
 }
 
-.service-badge.pooling{
+.kyc-layout .service-badge.pooling{
 
     background:#E3F2FD;
 
@@ -26,7 +26,7 @@
 
 }
 
-.service-badge.taxi{
+.kyc-layout .service-badge.taxi{
 
     background:#DCFCE7;
 
@@ -34,10 +34,12 @@
 
 }
 
-.service-badge.travels{
+.kyc-layout .service-badge.travels{
 
     background:#FFF3E0;
 
     color:#EF6C00;
 
 }
+
+

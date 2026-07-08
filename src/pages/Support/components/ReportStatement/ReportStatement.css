@@ -1,0 +1,24 @@
+.report-input{
+
+width:220px;
+
+height:42px;
+
+padding:0 14px;
+
+border:1px solid #D1D5DB;
+
+border-radius:10px;
+
+outline:none;
+
+font-size:var(--font-control);
+
+}
+
+.report-input:focus{
+
+border-color:#465A26;
+
+}
+

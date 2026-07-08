@@ -22,7 +22,7 @@ const KYC = () => {
     const [search, setSearch] = useState("");
 
     const [activeFilter, setActiveFilter] =
-        useState<KYCFilterType>("All Requests");
+        useState<KYCFilterType>("All");
 
     const [loading, setLoading] = useState(true);
 
@@ -70,11 +70,20 @@ const KYC = () => {
 
         let data = [...records];
 
-        if (activeFilter !== "All Requests") {
+        if (activeFilter !== "All") {
 
             data = data.filter(
 
-                item => item.status === activeFilter
+                item => {
+
+                    const status =
+                        activeFilter === "Approved"
+                            ? "Verified"
+                            : activeFilter;
+
+                    return item.status === status;
+
+                }
 
             );
 

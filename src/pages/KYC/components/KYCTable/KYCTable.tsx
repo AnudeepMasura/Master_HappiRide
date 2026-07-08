@@ -24,29 +24,25 @@ const KYCTable = ({
 
                     <tr>
 
-                        <th>Rider ID</th>
+                        <th>RIDER ID</th>
 
-                        <th>Username</th>
+                        <th>USERNAME</th>
 
-                        <th>Full Name</th>
+                        <th>FULL NAME</th>
 
-                        <th>Mobile</th>
+                        <th>MOBILE</th>
 
-                        <th>Service</th>
+                        <th>SERVICE</th>
 
-                        <th>Personal Details</th>
+                        <th>PERSONAL</th>
 
-                        <th>Rider KYC</th>
+                        <th>RIDER KYC</th>
 
-                        <th>Vehicle KYC</th>
+                        <th>VEHICLE KYC</th>
 
-                        <th>Status</th>
+                        <th>PREV REJECTED</th>
 
-                        <th>Verified By</th>
-
-                        <th>Rejections</th>
-
-                        <th>Rejected Reason</th>
+                        <th>PREV REJ REASON</th>
 
                     </tr>
 

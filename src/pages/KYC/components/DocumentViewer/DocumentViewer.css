@@ -1,4 +1,4 @@
-.document-view-btn{
+.kyc-layout .document-view-btn{
 
     width:36px;
 
@@ -18,7 +18,7 @@
 
 }
 
-.document-view-btn:hover{
+.kyc-layout .document-view-btn:hover{
 
     background:#465A26;
 
@@ -26,10 +26,11 @@
 
 }
 
-.document-na{
+.kyc-layout .document-na{
 
     color:#9CA3AF;
 
     font-weight:600;
 
 }
+

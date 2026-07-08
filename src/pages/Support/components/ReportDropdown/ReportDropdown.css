@@ -1,0 +1,20 @@
+.report-dropdown{
+
+width:180px;
+
+height:42px;
+
+padding:0 12px;
+
+border:1px solid #D1D5DB;
+
+border-radius:10px;
+
+background:white;
+
+outline:none;
+
+font-size:var(--font-control);
+
+}
+

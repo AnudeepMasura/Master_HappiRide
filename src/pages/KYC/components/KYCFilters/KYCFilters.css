@@ -2,7 +2,7 @@
    KYC Filters
 ========================================== */
 
-.kyc-filters{
+.kyc-layout .kyc-filters{
 
     display:flex;
 
@@ -16,7 +16,7 @@
 
 }
 
-.kyc-filter{
+.kyc-layout .kyc-filter{
 
     padding:14px 0;
 
@@ -38,19 +38,19 @@
 
 }
 
-.kyc-filter:hover{
+.kyc-layout .kyc-filter:hover{
 
     color:#465A26;
 
 }
 
-.kyc-filter.active{
+.kyc-layout .kyc-filter.active{
 
     color:#16A34A;
 
 }
 
-.kyc-filter.active::after{
+.kyc-layout .kyc-filter.active::after{
 
     content:"";
 
@@ -72,7 +72,7 @@
 
 @media(max-width:768px){
 
-.kyc-filters{
+.kyc-layout .kyc-filters{
 
 overflow-x:auto;
 
@@ -82,10 +82,12 @@ padding-bottom:8px;
 
 }
 
-.kyc-filters::-webkit-scrollbar{
+.kyc-layout .kyc-filters::-webkit-scrollbar{
 
 display:none;
 
 }
 
 }
+
+

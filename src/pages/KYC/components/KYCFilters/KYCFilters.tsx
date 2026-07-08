@@ -1,9 +1,9 @@
 import "./KYCFilters.css";
 
 export type KYCFilterType =
-    | "All Requests"
+    | "All"
     | "Pending"
-    | "Verified"
+    | "Approved"
     | "Rejected";
 
 interface KYCFiltersProps {
@@ -23,11 +23,11 @@ const KYCFilters = ({
 
     const filters: KYCFilterType[] = [
 
-        "All Requests",
+        "All",
 
         "Pending",
 
-        "Verified",
+        "Approved",
 
         "Rejected"
 

@@ -1,0 +1,7 @@
+.support-layout {
+    width: 100%;
+    min-width: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+}

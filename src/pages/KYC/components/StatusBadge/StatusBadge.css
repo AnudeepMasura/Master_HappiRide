@@ -1,4 +1,4 @@
-.status-badge{
+.kyc-layout .status-badge{
 
     display:inline-flex;
 
@@ -16,7 +16,7 @@
 
 }
 
-.status-badge.pending{
+.kyc-layout .status-badge.pending{
 
     background:#FEF3C7;
 
@@ -24,7 +24,7 @@
 
 }
 
-.status-badge.verified{
+.kyc-layout .status-badge.verified{
 
     background:#DCFCE7;
 
@@ -32,10 +32,12 @@
 
 }
 
-.status-badge.rejected{
+.kyc-layout .status-badge.rejected{
 
     background:#FEE2E2;
 
     color:#DC2626;
 
 }
+
+

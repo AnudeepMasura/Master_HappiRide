@@ -1,0 +1,120 @@
+/* =====================================
+Support Header
+===================================== */
+
+.support-layout .support-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+/* ============================ */
+
+.support-layout .support-title h1{
+
+font-size:var(--font-page-title);
+
+font-weight:700;
+
+color:#111827;
+
+letter-spacing:0;
+
+line-height:1.2;
+
+}
+
+/* ============================ */
+
+.support-layout .support-date-filter{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+}
+
+.support-layout .support-date-filter span{
+
+font-size:var(--font-sm);
+
+font-weight:500;
+
+color:#4B5563;
+
+}
+
+/* ============================ */
+
+.support-layout .support-date-filter input{
+
+width:172px;
+
+height:50px;
+
+padding:0 14px;
+
+border:1px solid #E5E7EB;
+
+border-radius:12px;
+
+background:white;
+
+font-size:var(--font-control);
+
+outline:none;
+
+transition:.2s;
+
+}
+
+.support-layout .support-date-filter input:focus{
+
+border-color:#465A26;
+
+}
+
+/* ============================ */
+
+@media(max-width:992px){
+
+.support-layout .support-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.support-layout .support-date-filter{
+
+flex-wrap:wrap;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.support-layout .support-title h1{
+
+font-size:24px;
+
+}
+
+.support-layout .support-date-filter input{
+
+width:100%;
+
+}
+
+}
+

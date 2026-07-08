@@ -1,0 +1,260 @@
+/* ==========================================================
+   Support Table
+   ========================================================== */
+
+.support-table-wrapper {
+
+    width: 100%;
+
+    background: #FFFFFF;
+
+    border: 1px solid #ECECEC;
+
+    border-radius: 16px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .05);
+
+    overflow-x: auto;
+
+}
+
+.support-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 1160px;
+
+}
+
+/* ==========================================
+   Table Header
+========================================== */
+
+.support-table thead {
+
+    background: #FAFAFA;
+
+}
+
+.support-table th {
+
+    padding: 22px 20px;
+
+    text-align: left;
+
+    font-size: var(--font-table-heading);
+
+    font-weight: 700;
+
+    color: #374151;
+
+    letter-spacing: .6px;
+
+    font-family: inherit;
+
+}
+
+/* ==========================================
+   Table Body
+========================================== */
+
+.support-table td {
+
+    padding: 22px 20px;
+
+    font-size: var(--font-table-body);
+
+    color: #111827;
+
+    border-top: 1px solid #F0F0F0;
+
+    font-family: inherit;
+
+}
+
+.support-table tbody tr {
+
+    transition: background .2s ease;
+
+}
+
+.support-table tbody tr:hover {
+
+    background: #FAFCF8;
+
+}
+
+/* ==========================================
+   Ticket Status
+========================================== */
+
+.support-status {
+
+    min-width: 86px;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: var(--font-badge);
+
+    font-weight: 500;
+
+    box-sizing: border-box;
+
+}
+
+.support-status.ongoing {
+
+    background: #FEF3C7;
+
+    color: #B45309;
+
+}
+
+.support-status.closed {
+
+    background: #DCFCE7;
+
+    color: #15803D;
+
+}
+
+/* ==========================================
+   Action Button
+========================================== */
+
+.support-view-button {
+
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #9CA3AF;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    transition: .2s;
+
+}
+
+.support-view-button:hover {
+
+    background: #F0F3E8;
+
+    color: #465A26;
+
+}
+
+
+.support-report-select {
+
+    min-width: 112px;
+
+    height: 36px;
+
+    padding: 0 12px;
+
+    border: 1px solid #D8DECA;
+
+    border-radius: 8px;
+
+    background: #FFFFFF;
+
+    color: #374151;
+
+    font: inherit;
+
+    font-size: var(--font-table-body);
+
+    cursor: pointer;
+
+}
+
+.support-report-select:focus {
+
+    outline: 2px solid #B9C99A;
+
+    outline-offset: 2px;
+
+}
+
+.support-close-button {
+
+    min-width: 70px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #FEE2E2;
+
+    color: #B91C1C;
+
+    font: inherit;
+
+    font-size: var(--font-table-body);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.support-close-button:hover:not(:disabled) {
+
+    background: #FCA5A5;
+
+    color: #7F1D1D;
+
+}
+
+.support-close-button:disabled {
+
+    background: #E5E7EB;
+
+    color: #6B7280;
+
+    cursor: not-allowed;
+
+}
+/* ==========================================
+   Empty State
+========================================== */
+
+.support-empty-state {
+
+    padding: 40px;
+
+    text-align: center;
+
+    font-size: var(--font-table-body);
+
+    color: #6B7280;
+
+}
+

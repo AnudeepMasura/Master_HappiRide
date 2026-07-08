@@ -2,7 +2,7 @@
    KYC Header
 ========================================== */
 
-.kyc-header{
+.kyc-layout .kyc-header{
 
     display:flex;
 
@@ -16,7 +16,7 @@
 
 }
 
-.kyc-title h1{
+.kyc-layout .kyc-title h1{
 
     font-size:var(--font-page-title);
 
@@ -30,7 +30,7 @@
 
 /* ============================== */
 
-.kyc-actions{
+.kyc-layout .kyc-actions{
 
     display:flex;
 
@@ -42,7 +42,7 @@
 
 /* ============================== */
 
-.search-box{
+.kyc-layout .search-box{
 
     width:320px;
 
@@ -64,13 +64,15 @@
 
 }
 
-.search-box svg{
+.kyc-layout .search-box__icon{
 
     color:#6B7280;
 
+    flex:0 0 auto;
+
 }
 
-.search-box input{
+.kyc-layout .search-box input{
 
     flex:1;
 
@@ -82,11 +84,21 @@
 
     font-size:var(--font-control);
 
+    color:inherit;
+
+    min-width:0;
+
+}
+
+.kyc-layout .search-box input::placeholder{
+
+    color:#9CA3AF;
+
 }
 
 /* ============================== */
 
-.export-btn{
+.kyc-layout .export-btn{
 
     height:48px;
 
@@ -116,7 +128,7 @@
 
 }
 
-.export-btn:hover{
+.kyc-layout .export-btn:hover{
 
     background:#5B7133;
 
@@ -126,7 +138,7 @@
 
 @media(max-width:900px){
 
-.kyc-header{
+.kyc-layout .kyc-header{
 
 flex-direction:column;
 
@@ -134,7 +146,7 @@ align-items:flex-start;
 
 }
 
-.kyc-actions{
+.kyc-layout .kyc-actions{
 
 width:100%;
 
@@ -142,10 +154,12 @@ flex-wrap:wrap;
 
 }
 
-.search-box{
+.kyc-layout .search-box{
 
 width:100%;
 
 }
 
 }
+
+

@@ -35,13 +35,11 @@ const KYCHeader = ({
 
                 <div className="search-box">
 
-                    <Search size={18} />
-
                     <input
 
                         type="text"
 
-                        placeholder="Search by name or Rider ID"
+                        placeholder="Search..."
 
                         value={search}
 
@@ -51,6 +49,11 @@ const KYCHeader = ({
 
                         }
 
+                    />
+
+                    <Search
+                        className="search-box__icon"
+                        size={24}
                     />
 
                 </div>

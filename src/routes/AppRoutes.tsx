@@ -8,28 +8,41 @@ import {
 import DashboardLayout
 from "../layouts/DashboardLayout";
 
+import SupportLayout
+from "../layouts/SupportLayout";
+
+import KYCLayout
+from "../layouts/KYCLayout";
+
 import ProtectedRoute
 from "./ProtectedRoute";
 
+import RoleRoute, {
+    RoleRedirect
+} from "./RoleRoute";
+
 import Login
-from "../pages/Login/Login";
+from "../pages/Auth/Login/Login";
 
 import Dashboard
-from "../pages/Dashboard/Dashboard";
+from "../pages/Admin/Dashboard/Dashboard";
 
 import Analytics
-from "../pages/Analytics/Analytics";
+from "../pages/Admin/Analytics/Analytics";
 
 import Users
-from "../pages/Users/Users";
+from "../pages/Admin/Users/Users";
 
 import CustomerSupport
-from "../pages/CustomerSupport/CustomerSupport";
+from "../pages/Admin/CustomerSupport/CustomerSupport";
 
+import AdminKYC from "../pages/Admin/KYC/KYC";
 import KYC from "../pages/KYC/KYC";
-import RideHistory from "../pages/RideHistory/RideHistory"; 
-import Wallet from "../pages/Wallet/Wallet";
-import Riders from "../pages/Riders/Riders";
+import KYCTickets from "../pages/KYC/Tickets/Tickets";
+import RideHistory from "../pages/Admin/RideHistory/RideHistory"; 
+import Wallet from "../pages/Admin/Wallet/Wallet";
+import Riders from "../pages/Admin/Riders/Riders";
+import Support from "../pages/Support/Support";
 
 
 const AppRoutes = () => {
@@ -62,60 +75,128 @@ const AppRoutes = () => {
                         element={<DashboardLayout />}
                     >
 
+                        <Route
+                            index
+                            element={<RoleRedirect />}
+                        />
+
                         {/* ==================================
-                            Dashboard
+                            Admin
                         ================================== */}
 
                         <Route
-                            path="/"
-                            element={<Dashboard />}
-                        />
+                            element={
+                                <RoleRoute
+                                    allowedRoles={["admin"]}
+                                />
+                            }
+                        >
+
+                            <Route
+                                path="/admin"
+                                element={<Dashboard />}
+                            />
+
+
+                            <Route
+                                path="/admin/analytics"
+                                element={<Analytics />}
+                            />
+
+
+                            <Route
+                                path="/admin/users"
+                                element={<Users />}
+                            />
+
+
+                            <Route
+                                path="/admin/customer-support"
+                                element={<CustomerSupport />}
+                            />
+
+
+                            <Route
+                                path="/admin/ride-history"
+                                element={<RideHistory />}
+                            />
+
+
+                            <Route
+                                path="/admin/wallet"
+                                element={<Wallet />}
+                            />
+
+
+                            <Route
+                                path="/admin/riders"
+                                element={<Riders />}
+                            />
+
+
+                            <Route
+                                path="/admin/kyc"
+                                element={<AdminKYC />}
+                            />
+
+                        </Route>
 
 
                         {/* ==================================
-                            Analytics
+                            Support
                         ================================== */}
 
                         <Route
-                            path="/analytics"
-                            element={<Analytics />}
-                        />
+                            element={
+                                <RoleRoute
+                                    allowedRoles={["support"]}
+                                />
+                            }
+                        >
+
+                            <Route
+                                element={<SupportLayout />}
+                            >
+
+                                <Route
+                                    path="/support"
+                                    element={<Support />}
+                                />
+
+                            </Route>
+
+                        </Route>
 
 
                         {/* ==================================
-                            Users
+                            KYC
                         ================================== */}
 
                         <Route
-                            path="/users"
-                            element={<Users />}
-                        />
+                            element={
+                                <RoleRoute
+                                    allowedRoles={["kyc"]}
+                                />
+                            }
+                        >
 
+                            <Route
+                                element={<KYCLayout />}
+                            >
 
-                        {/* ==================================
-                            Customer Support
-                        ================================== */}
+                                <Route
+                                    path="/kyc"
+                                    element={<KYC />}
+                                />
 
-                        <Route
-                            path="/customer-support"
-                            element={<CustomerSupport />}
-                        />
-                         <Route
-                            path="/KYC"
-                            element={<KYC />}
-                        />
-                        <Route
-                            path="/RideHistory"
-                            element={<RideHistory />}
-                        />
-                          <Route
-                            path="/Wallet"
-                            element={<Wallet />}
-                        />
-                         <Route
-                            path="/Riders"
-                            element={<Riders />}
-                        />
+                                <Route
+                                    path="/kyc/tickets"
+                                    element={<KYCTickets />}
+                                />
+
+                            </Route>
+
+                        </Route>
 
                     </Route>
 

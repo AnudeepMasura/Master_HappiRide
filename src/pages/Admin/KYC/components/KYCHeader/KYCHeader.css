@@ -1,0 +1,151 @@
+/* ==========================================
+   KYC Header
+========================================== */
+
+.kyc-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    gap:20px;
+
+}
+
+.kyc-title h1{
+
+    font-size:var(--font-page-title);
+
+    font-weight:700;
+
+    color:#111827;
+
+    line-height:1.2;
+
+}
+
+/* ============================== */
+
+.kyc-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* ============================== */
+
+.search-box{
+
+    width:320px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    background:white;
+
+}
+
+.search-box svg{
+
+    color:#6B7280;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-size:var(--font-control);
+
+}
+
+/* ============================== */
+
+.export-btn{
+
+    height:48px;
+
+    padding:0 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#465A26;
+
+    color:white;
+
+    font-size:var(--font-control);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.export-btn:hover{
+
+    background:#5B7133;
+
+}
+
+/* ============================== */
+
+@media(max-width:900px){
+
+.kyc-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.kyc-actions{
+
+width:100%;
+
+flex-wrap:wrap;
+
+}
+
+.search-box{
+
+width:100%;
+
+}
+
+}

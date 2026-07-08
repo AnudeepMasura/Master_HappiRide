@@ -14,6 +14,10 @@ import {
 import * as Icons
 from "../UI/Icons";
 
+import {
+    getStoredRole
+} from "../../routes/RoleRoute";
+
 
 interface MenuItem {
 
@@ -32,12 +36,15 @@ export const Sidebar = () => {
 
     const navigate = useNavigate();
 
+    const role =
+        getStoredRole();
+
 
     /* ==========================================
        Sidebar Menu Items
     ========================================== */
 
-    const menuItems: MenuItem[] = [
+    const adminMenuItems: MenuItem[] = [
 
         {
 
@@ -51,7 +58,7 @@ export const Sidebar = () => {
                 />
             ),
 
-            path: "/"
+            path: "/admin"
 
         },
 
@@ -68,7 +75,7 @@ export const Sidebar = () => {
                 />
             ),
 
-            path: "/analytics"
+            path: "/admin/analytics"
 
         },
 
@@ -84,7 +91,7 @@ export const Sidebar = () => {
                     size={18}
                 />
             ),  
-            path: "/Wallet"
+            path: "/admin/wallet"
 
         },
 
@@ -100,7 +107,7 @@ export const Sidebar = () => {
                     size={18}
                 />
             ),
-              path: "/RideHistory"
+              path: "/admin/ride-history"
 
         },
 
@@ -117,7 +124,7 @@ export const Sidebar = () => {
                 />
             ),
 
-            path: "/users"
+            path: "/admin/users"
 
         },
 
@@ -133,7 +140,7 @@ export const Sidebar = () => {
                     size={18}
                 />
             ),
-            path: "/Riders"
+            path: "/admin/riders"
 
         },
 
@@ -150,7 +157,7 @@ export const Sidebar = () => {
                 />
             ),
 
-            path: "/customer-support"
+            path: "/admin/customer-support"
 
         },
 
@@ -159,14 +166,15 @@ export const Sidebar = () => {
 
             id: "kyc",
 
-            label: "KYC",
+            label: "KYC Management",
 
             icon: (
                 <Icons.KycIcon
                     size={18}
                 />
             ),
-              path: "/KYC"
+
+            path: "/admin/kyc"
 
         },
 
@@ -186,6 +194,69 @@ export const Sidebar = () => {
         }
 
     ];
+
+    const supportMenuItems: MenuItem[] = [
+
+        {
+
+            id: "support",
+
+            label: "SUPPORT",
+
+            icon: (
+                <Icons.SupportIcon
+                    size={18}
+                />
+            ),
+
+            path: "/support"
+
+        }
+
+    ];
+
+    const kycMenuItems: MenuItem[] = [
+
+        {
+
+            id: "kyc",
+
+            label: "KYC",
+
+            icon: (
+                <Icons.KycIcon
+                    size={18}
+                />
+            ),
+
+            path: "/kyc"
+
+        },
+
+        {
+
+            id: "tickets",
+
+            label: "TICKETS",
+
+            icon: (
+                <Icons.SupportIcon
+                    size={18}
+                />
+            ),
+
+            path: "/kyc/tickets"
+
+        }
+
+    ];
+
+    const menuItems =
+        role === "support"
+            ? supportMenuItems
+            : role === "kyc"
+                ? kycMenuItems
+                : adminMenuItems;
 
 
     /* ==========================================
@@ -209,6 +280,10 @@ export const Sidebar = () => {
 
         localStorage.removeItem(
             "masterToken"
+        );
+
+        localStorage.removeItem(
+            "userRole"
         );
 
 
@@ -284,6 +359,7 @@ export const Sidebar = () => {
 
                                                 end={
                                                     item.path === "/"
+                                                    || item.path === "/kyc"
                                                 }
 
                                                 className={({

@@ -1,25 +1,19 @@
 import "./KYCRow.css";
 
 import ServiceBadge from "../ServiceBadge/ServiceBadge";
-import StatusBadge from "../StatusBadge/StatusBadge";
 import DocumentViewer from "../DocumentViewer/DocumentViewer";
 
 import type { KYCRecord } from "../../types";
 
 interface KYCRowProps {
-
     record: KYCRecord;
-
 }
 
 const KYCRow = ({
     record
-}:KYCRowProps)=>{
-
-    return(
-
+}: KYCRowProps) => {
+    return (
         <tr>
-
             <td>{record.riderId}</td>
 
             <td>{record.username}</td>
@@ -29,105 +23,52 @@ const KYCRow = ({
             <td>{record.mobile}</td>
 
             <td>
-
-                <ServiceBadge
-
-                    serviceType={record.service}
-
-                />
-
+                <ServiceBadge serviceType={record.service} />
             </td>
 
             <td>
-
                 <DocumentViewer
-
                     available={record.personalDocument}
-
                     title="Personal Document"
-
                 />
-
             </td>
 
             <td>
-
                 <DocumentViewer
-
                     available={record.riderKYC}
-
                     title="Rider KYC"
-
                 />
-
             </td>
 
             <td>
-
                 <DocumentViewer
-
                     available={record.vehicleKYC}
-
                     title="Vehicle KYC"
-
                 />
-
             </td>
 
             <td>
-
-                <StatusBadge
-
-                    status={record.status}
-
-                />
-
-            </td>
-
-            <td>
-
                 {
-
-                    record.verifiedBy || "—"
-
+                    record.rejectionCount > 0
+                        ? "Yes"
+                        : "No"
                 }
-
             </td>
 
             <td>
-
-                {record.rejectionCount}
-
-            </td>
-
-            <td>
-
                 {
-
-                    record.rejectedReason
-
-                    ?
-
-                    <DocumentViewer
-
-                        available={true}
-
-                        title={record.rejectedReason}
-
-                    />
-
-                    :
-
-                    "—"
-
+                    record.rejectedReason ? (
+                        <DocumentViewer
+                            available={true}
+                            title={record.rejectedReason}
+                        />
+                    ) : (
+                        "-"
+                    )
                 }
-
             </td>
-
         </tr>
-
     );
-
 };
 
 export default KYCRow;

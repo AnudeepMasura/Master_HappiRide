@@ -1,4 +1,4 @@
-.kyc-table-wrapper{
+.kyc-layout .kyc-table-wrapper{
 
     width:100%;
 
@@ -12,17 +12,39 @@
 
 }
 
-.kyc-table{
+.kyc-layout .kyc-table-wrapper::-webkit-scrollbar{
+
+    height:20px;
+
+}
+
+.kyc-layout .kyc-table-wrapper::-webkit-scrollbar-track{
+
+    background:#f3f3f3;
+
+}
+
+.kyc-layout .kyc-table-wrapper::-webkit-scrollbar-thumb{
+
+    background:#6b6b6b;
+
+    border:6px solid #f3f3f3;
+
+    border-radius:999px;
+
+}
+
+.kyc-layout .kyc-table{
 
     width:100%;
 
-    min-width:1700px;
+    min-width:1320px;
 
     border-collapse:collapse;
 
 }
 
-.kyc-table thead{
+.kyc-layout .kyc-table thead{
 
     background:#465A26;
 
@@ -30,7 +52,7 @@
 
 }
 
-.kyc-table th{
+.kyc-layout .kyc-table th{
 
     padding:18px;
 
@@ -40,9 +62,13 @@
 
     font-weight:600;
 
+    line-height:1.2;
+
+    white-space:nowrap;
+
 }
 
-.kyc-table td{
+.kyc-layout .kyc-table td{
 
     padding:18px;
 
@@ -50,10 +76,22 @@
 
     font-size:var(--font-table-body);
 
+    color:#374151;
+
+    white-space:nowrap;
+
 }
 
-.kyc-table tbody tr:hover{
+.kyc-layout .kyc-table td:first-child{
+
+    font-weight:800;
+
+}
+
+.kyc-layout .kyc-table tbody tr:hover{
 
     background:#F8FAF5;
 
 }
+
+

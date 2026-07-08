@@ -1,0 +1,72 @@
+/* =======================================
+Support Statistics Cards
+======================================= */
+
+.support-layout .support-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+.support-layout .support-stat-card{
+
+    background:#FFFFFF;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    border:1px solid #ECECEC;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.05);
+
+    transition:.25s;
+
+}
+
+.support-layout .support-stat-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.support-layout .support-stat-title{
+
+    color:#6B7280;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+.support-layout .support-stat-value{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    color:#465A26;
+
+}
+
+@media(max-width:992px){
+
+.support-layout .support-stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
